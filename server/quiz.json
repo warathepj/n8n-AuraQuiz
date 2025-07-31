@@ -1,42 +1,42 @@
 {
-  "title": "Mars (Easy)",
+  "title": "butterfly (Easy)",
   "totalQuestions": 3,
   "questions": [
     {
       "questionNumber": 1,
-      "questionText": "What is Mars often called due to its distinctive reddish appearance?",
+      "questionText": "What do adult butterflies primarily drink for energy from flowers?",
       "options": [
-        "A) The Blue Planet",
-        "B) The Green Planet",
-        "C) The Red Planet",
-        "D) The Gas Giant"
+        "A) Water",
+        "B) Nectar",
+        "C) Sap",
+        "D) Dew drops"
       ],
-      "correctAnswer": "C",
-      "explanation": "Mars is commonly known as \"The Red Planet\" because of the iron oxide (rust) on its surface, which gives it a reddish hue. The Blue Planet refers to Earth, and Gas Giant refers to planets like Jupiter and Saturn."
+      "correctAnswer": "B",
+      "explanation": "Adult butterflies primarily feed on nectar from flowers, which provides them with the sugar and energy they need. While they may drink water or dew for hydration, nectar is their main food source. Sap is a food source for some insects but not typically the primary one for most adult butterflies."
     },
     {
       "questionNumber": 2,
-      "questionText": "How many natural moons orbit Mars?",
+      "questionText": "What covers a butterfly's wings, giving them their vibrant colors and patterns?",
       "options": [
-        "A) One",
-        "B) Two",
-        "C) Three",
-        "D) Four"
+        "A) Fur",
+        "B) Feathers",
+        "C) Scales",
+        "D) Skin"
       ],
-      "correctAnswer": "B",
-      "explanation": "Mars has two small natural moons, Phobos and Deimos. Earth has one moon, while other planets have different numbers or none."
+      "correctAnswer": "C",
+      "explanation": "Butterfly wings are covered in thousands of tiny, overlapping scales. These scales contain pigments or are structured in a way that creates iridescent colors, giving butterflies their beautiful appearance. Fur and feathers are coverings for mammals and birds, respectively, not insects. Skin is a general term but doesn't describe the specific structures on a butterfly's wing."
     },
     {
       "questionNumber": 3,
-      "questionText": "Mars is the ____ planet from the Sun.",
+      "questionText": "Before transforming into an adult butterfly, what is the worm-like larval stage called?",
       "options": [
-        "A) Second",
-        "B) Third",
-        "C) Fourth",
-        "D) Fifth"
+        "A) Tadpole",
+        "B) Caterpillar",
+        "C) Pupa",
+        "D) Larva"
       ],
-      "correctAnswer": "C",
-      "explanation": "In order from the Sun, the planets are Mercury, Venus, Earth, and then Mars, making it the fourth planet. Venus is the second, Earth is the third, and Jupiter is the fifth."
+      "correctAnswer": "B",
+      "explanation": "The worm-like larval stage of a butterfly is specifically known as a caterpillar. Tadpole is the larval stage of frogs and toads. Pupa is the resting stage after the caterpillar, and while 'larva' is a general term for the immature form, 'caterpillar' is the precise and well-known term for butterflies."
     }
   ]
 }

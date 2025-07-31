@@ -52,6 +52,9 @@
 
             <!-- Result Message -->
             <div id="resultMessage" class="hidden mt-6 p-4 rounded-xl text-white text-center font-bold"></div>
+
+            <!-- Explanation Message -->
+            <div id="explanationMessage" class="hidden mt-4 p-4 rounded-xl text-white text-center text-sm bg-blue-500 bg-opacity-30"></div>
         </div>
 
         <!-- Next Button -->
@@ -127,6 +130,7 @@
 
             const isCorrect = selectedOptionLetter === currentQuestion.correctAnswer;
             const resultMessage = document.getElementById('resultMessage');
+            const explanationMessage = document.getElementById('explanationMessage');
             const nextBtn = document.getElementById('nextBtn');
 
             if (isCorrect) {
@@ -150,6 +154,10 @@
                 });
             }
 
+            // Display explanation
+            explanationMessage.textContent = currentQuestion.explanation;
+            explanationMessage.classList.remove('hidden');
+
             nextBtn.classList.remove('hidden');
         }
 
@@ -161,6 +169,7 @@
             });
 
             document.getElementById('resultMessage').classList.add('hidden');
+            document.getElementById('explanationMessage').classList.add('hidden'); // Hide explanation
             document.getElementById('nextBtn').classList.add('hidden');
             
             // Re-render the first question to reset the state
