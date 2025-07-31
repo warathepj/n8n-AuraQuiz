@@ -68,6 +68,11 @@
         <button id="nextBtn" onclick="nextQuestion()" class="hidden w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold tracking-wider glow hover:opacity-90 transition-all duration-200">
             Next Question
         </button>
+
+        <!-- Create New Quiz Topic Button -->
+        <button id="createNewQuizTopicBtn" onclick="createNewQuizTopic()" class="hidden w-full mt-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-xl font-bold tracking-wider glow hover:opacity-90 transition-all duration-200">
+            Create New Quiz Topic
+        </button>
     </div>
 
     <script>
@@ -194,6 +199,7 @@
                 document.getElementById('explanationMessage').classList.add('hidden');
                 document.getElementById('nextBtn').textContent = 'Play Again';
                 document.getElementById('nextBtn').onclick = resetQuiz;
+                document.getElementById('createNewQuizTopicBtn').classList.remove('hidden'); // Show new quiz topic button
             }
         }
 
@@ -204,7 +210,12 @@
             document.getElementById('nextBtn').onclick = nextQuestion; // Reset button action
             document.getElementById('nextBtn').textContent = 'Next Question'; // Reset button text
             document.getElementById('nextBtn').classList.add('hidden'); // Hide button initially
+            document.getElementById('createNewQuizTopicBtn').classList.add('hidden'); // Hide new quiz topic button
             initQuiz(); // Re-initialize to fetch data and render first question
+        }
+
+        function createNewQuizTopic() {
+            window.location.href = '/'; // Navigate to the root route
         }
 
         // Initialize the quiz when the page loads

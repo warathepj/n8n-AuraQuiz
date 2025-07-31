@@ -1,42 +1,42 @@
 {
-  "title": "นก (Easy)",
+  "title": "gold (hard)",
   "totalQuestions": 3,
   "questions": [
     {
       "questionNumber": 1,
-      "questionText": "สิ่งใดที่พบนกเท่านั้นและไม่มีในสัตว์ชนิดอื่น?",
+      "questionText": "Unlike copper and silver, which are also in Group 11 of the periodic table, gold exhibits a distinct yellow color rather than the typical metallic luster. What fundamental physical phenomenon is primarily responsible for gold's characteristic yellow hue?",
       "options": [
-        "A) ขน",
-        "B) หนวด",
-        "C) เกล็ด",
-        "D) ครีบ"
+        "A) Its unique face-centered cubic crystal lattice structure, which preferentially reflects yellow light.",
+        "B) The d-band electronic transitions, which are significantly affected by spin-orbit coupling and relativistic effects, leading to absorption of blue light.",
+        "C) The presence of trace impurities of iron and sulfur within its crystalline structure.",
+        "D) Its high thermal conductivity, causing it to absorb and re-emit light preferentially in the yellow spectrum."
       ],
-      "correctAnswer": "A",
-      "explanation": "นกทุกชนิดมีขนปกคลุมร่างกาย ซึ่งเป็นลักษณะเฉพาะที่ไม่มีในสัตว์ประเภทอื่น หนวดเป็นส่วนของแมลง เกล็ดเป็นส่วนของสัตว์เลื้อยคลาน และครีบเป็นส่วนของปลา"
+      "correctAnswer": "B",
+      "explanation": "Gold's characteristic yellow color, unlike the silvery appearance of most other metals including its Group 11 counterparts (silver and copper's reddish hue), is primarily attributed to relativistic effects on its electrons. These effects cause the 5d and 6s electron orbitals to contract and expand, respectively, narrowing the energy gap between them. This specific energy gap allows gold to absorb higher-energy blue light from the visible spectrum, reflecting the complementary yellow light, which our eyes perceive. Options A and D are incorrect as crystal structure and thermal conductivity do not directly dictate color in this specific manner. Option C is incorrect; while impurities can affect a metal's color, gold's inherent yellow is a fundamental property of the pure element."
     },
     {
       "questionNumber": 2,
-      "questionText": "นกส่วนใหญ่ใช้ส่วนใดของร่างกายในการบิน?",
+      "questionText": "In gold metallurgy, certain refractory gold ores pose significant challenges to conventional cyanide leaching due to the gold being chemically bound within the ore matrix. Which specific class of gold-bearing minerals often requires intensive pre-treatment like roasting or pressure oxidation before gold extraction can efficiently occur?",
       "options": [
-        "A) ขา",
-        "B) ปีก",
-        "C) หาง",
-        "D) จะงอยปาก"
+        "A) Placer deposits, where gold is in elemental form within unconsolidated sediments.",
+        "B) Oxide ores, where gold is finely disseminated in oxidized iron formations.",
+        "C) Gold tellurides, such as calaverite or sylvanite, where gold is chemically bonded with tellurium.",
+        "D) Native gold encapsulated within quartz veins, requiring only crushing and grinding."
       ],
-      "correctAnswer": "B",
-      "explanation": "นกส่วนใหญ่ใช้ปีกในการบินเคลื่อนที่ในอากาศ ขาใช้ในการเดินหรือเกาะ หางช่วยในการทรงตัวและควบคุมทิศทาง ส่วนจะงอยปากใช้ในการกินอาหารหรือสร้างรัง"
+      "correctAnswer": "C",
+      "explanation": "Gold tellurides (e.g., calaverite, sylvanite, krennerite) are a major class of refractory gold ores because the gold is chemically bonded to tellurium. This chemical bond makes the gold inaccessible to direct dissolution by conventional cyanide leaching, requiring intensive pre-treatment processes such as roasting (to break down the tellurides and volatilize tellurium) or pressure oxidation (to liberate the gold) before efficient gold recovery can take place. Placer deposits (A) are processed by physical separation. Oxide ores (B) are generally more amenable to direct leaching than tellurides, though some can still be refractory. Native gold within quartz veins (D) typically requires only physical comminution (crushing and grinding) followed by gravity or cyanide leaching to recover the liberated gold particles."
     },
     {
       "questionNumber": 3,
-      "questionText": "นกมักจะวางไข่ไว้ที่ไหน?",
+      "questionText": "The international monetary system established by the Bretton Woods Agreement in 1944 pegged the U.S. dollar to gold at a fixed rate, and other currencies were pegged to the dollar. What specific action, often referred to as the \"Nixon Shock,\" effectively ended the convertibility of the U.S. dollar to gold for foreign governments and marked the collapse of the Bretton Woods system?",
       "options": [
-        "A) ใต้ดิน",
-        "B) ในน้ำ",
-        "C) บนต้นไม้ในรัง",
-        "D) ในถ้ำ"
+        "A) The Gold Reserve Act of 1934, which revalued gold and nationalized gold holdings.",
+        "B) The creation of the International Monetary Fund (IMF) in 1944.",
+        "C) President Nixon's unilateral suspension of the dollar's convertibility to gold on August 15, 1971.",
+        "D) The Glass-Steagall Act of 1933, which separated commercial and investment banking."
       ],
       "correctAnswer": "C",
-      "explanation": "นกส่วนใหญ่สร้างรังบนต้นไม้เพื่อวางไข่และเลี้ยงลูกอ่อน การวางไข่ใต้ดิน ในน้ำ หรือในถ้ำนั้นพบได้ในสัตว์ชนิดอื่น เช่น สัตว์เลื้อยคลาน หรือสัตว์น้ำบางชนิด"
+      "explanation": "On August 15, 1971, President Richard Nixon announced the unilateral suspension of the convertibility of the U.S. dollar to gold for foreign central banks, effectively ending the fixed exchange rate system established by the Bretton Woods Agreement. This event, widely known as the \"Nixon Shock,\" decoupled the dollar from gold and led to a floating exchange rate system. The Gold Reserve Act of 1934 (A) nationalized domestic gold and revalued the dollar, changing the U.S. internal gold standard, but it predated Bretton Woods. The creation of the IMF (B) was a result of the Bretton Woods Agreement, not its termination. The Glass-Steagall Act (D) was banking reform legislation unrelated to the gold standard's final collapse."
     }
   ]
 }
