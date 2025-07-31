@@ -1,42 +1,42 @@
 {
-  "title": "Japan (Easy)",
+  "title": "Mars (Easy)",
   "totalQuestions": 3,
   "questions": [
     {
       "questionNumber": 1,
-      "questionText": "What is the capital city of Japan?",
+      "questionText": "What is Mars often called due to its distinctive reddish appearance?",
       "options": [
-        "A) Kyoto",
-        "B) Beijing",
-        "C) Tokyo",
-        "D) Seoul"
+        "A) The Blue Planet",
+        "B) The Green Planet",
+        "C) The Red Planet",
+        "D) The Gas Giant"
       ],
       "correctAnswer": "C",
-      "explanation": "Tokyo has been the official capital of Japan since 1868. Kyoto was a former imperial capital. Beijing is the capital of China, and Seoul is the capital of South Korea."
+      "explanation": "Mars is commonly known as \"The Red Planet\" because of the iron oxide (rust) on its surface, which gives it a reddish hue. The Blue Planet refers to Earth, and Gas Giant refers to planets like Jupiter and Saturn."
     },
     {
       "questionNumber": 2,
-      "questionText": "Which famous mountain is a widely recognized symbol of Japan?",
+      "questionText": "How many natural moons orbit Mars?",
       "options": [
-        "A) Mount Everest",
-        "B) Mount Fuji",
-        "C) Mount Kilimanjaro",
-        "D) Mount Kilauea"
+        "A) One",
+        "B) Two",
+        "C) Three",
+        "D) Four"
       ],
       "correctAnswer": "B",
-      "explanation": "Mount Fuji is the highest peak in Japan and a revered symbol of the country. Mount Everest is in Nepal/China, Mount Kilimanjaro is in Tanzania (Africa), and Mount Kilauea is a volcano in Hawaii (USA)."
+      "explanation": "Mars has two small natural moons, Phobos and Deimos. Earth has one moon, while other planets have different numbers or none."
     },
     {
       "questionNumber": 3,
-      "questionText": "What is the name of the beautiful pink and white flowers that are a significant cultural symbol of Japan, especially in spring?",
+      "questionText": "Mars is the ____ planet from the Sun.",
       "options": [
-        "A) Roses",
-        "B) Tulips",
-        "C) Cherry blossoms",
-        "D) Sunflowers"
+        "A) Second",
+        "B) Third",
+        "C) Fourth",
+        "D) Fifth"
       ],
       "correctAnswer": "C",
-      "explanation": "Cherry blossoms, or Sakura, are an iconic symbol of Japan, celebrated for their ephemeral beauty in spring. Roses, tulips, and sunflowers are not primarily associated with Japanese culture in the same way."
+      "explanation": "In order from the Sun, the planets are Mercury, Venus, Earth, and then Mars, making it the fourth planet. Venus is the second, Earth is the third, and Jupiter is the fifth."
     }
   ]
 }

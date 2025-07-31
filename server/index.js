@@ -69,6 +69,17 @@ app.post('/webhook-response', (req, res) => {
     });
 });
 
+// New endpoint to serve quiz.json data
+app.get('/api/quiz-data', (req, res) => {
+    fs.readFile(path.join(__dirname, 'quiz.json'), 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading quiz.json:', err);
+            return res.status(500).json({ message: 'Error loading quiz data.' });
+        }
+        res.json(JSON.parse(data));
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
