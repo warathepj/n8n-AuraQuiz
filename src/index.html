@@ -76,7 +76,7 @@
 
                 const result = await response.json();
                 console.log('Server response:', result);
-                alert('Form submitted successfully! Check console for response.');
+                window.location.href = '/quiz'; // Redirect to /quiz
             } catch (error) {
                 console.error('Error submitting form:', error);
                 alert('Error submitting form. Please try again.');

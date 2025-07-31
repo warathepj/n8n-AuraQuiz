@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../src', 'index.html'));
 });
 
+app.get('/quiz', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src', 'quiz.html'));
+});
+
 app.post('/submit-quiz', async (req, res) => { // Make the function async
     const { keyword, quizLevel, sessionId } = req.body;
     console.log('Received quiz submission:');
