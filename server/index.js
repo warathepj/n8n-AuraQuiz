@@ -15,16 +15,17 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit-quiz', async (req, res) => { // Make the function async
-    const { keyword, quizLevel } = req.body;
+    const { keyword, quizLevel, sessionId } = req.body;
     console.log('Received quiz submission:');
     console.log('Keyword:', keyword);
     console.log('Quiz Level:', quizLevel);
+    console.log('Session ID:', sessionId);
 
     const webhookUrl = 'http://localhost:5678/webhook-test/43ff1db1-c591-4114-bdc8-8b9996dd4fed';
 
     try {
         // Forward data to the webhook
-        await axios.post(webhookUrl, { keyword, quizLevel });
+        await axios.post(webhookUrl, { keyword, quizLevel, sessionId });
         console.log('Data successfully forwarded to webhook.');
     } catch (error) {
         console.error('Error forwarding data to webhook:', error.message);
@@ -32,7 +33,7 @@ app.post('/submit-quiz', async (req, res) => { // Make the function async
         // if the webhook forwarding is critical. For now, we'll just log the error.
     }
 
-    res.json({ message: 'Data received successfully and forwarded!', keyword, quizLevel });
+    res.json({ message: 'Data received successfully and forwarded!', keyword, quizLevel, sessionId });
 });
 
 app.listen(PORT, () => {

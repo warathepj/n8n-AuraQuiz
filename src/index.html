@@ -49,9 +49,20 @@
                 return;
             }
 
+            let sessionId = localStorage.getItem('sessionId');
+            let sessionCreationTime = localStorage.getItem('sessionCreationTime');
+            const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+
+            if (!sessionId || !sessionCreationTime || (Date.now() - parseInt(sessionCreationTime) > oneHour)) {
+                sessionId = Date.now().toString(); // Use timestamp as sessionId
+                localStorage.setItem('sessionId', sessionId);
+                localStorage.setItem('sessionCreationTime', Date.now().toString());
+            }
+
             const data = {
                 keyword: keyword,
-                quizLevel: quizLevel.value
+                quizLevel: quizLevel.value,
+                sessionId: sessionId
             };
 
             try {
