@@ -3,136 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibrant Quiz Game</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        .glow {
-            box-shadow: 0 0 15px currentColor;
-        }
-        .option:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        .option.correct {
-            animation: pulse 0.5s 2;
-        }
-    </style>
+    <title>Document</title>
 </head>
-<body class="bg-gradient-to-br from-purple-900 to-pink-700 min-h-screen flex items-center justify-center p-4">
-    <div class="w-full max-w-md">
-        <!-- Quiz Header -->
-        <div class="flex items-center justify-between mb-8">
-            <div class="bg-yellow-400 text-purple-900 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl glow">
-                <i class="fas fa-question"></i>
+<body>
+    <h1 class="text-white text-4xl font-bold mb-8 absolute top-8 left-1/2 transform -translate-x-1/2">AuraQuiz</h1>
+    <div class="flex justify-center items-center h-screen">
+        <form class="bg-white p-8 rounded-lg shadow-md w-96">
+            <div class="mb-4">
+                <label for="keyword" class="block text-gray-700 text-sm font-bold mb-2">Keyword:</label>
+                <input type="text" id="keyword" name="keyword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter keyword">
             </div>
-            <div class="text-right">
-                <p class="text-green-300 font-medium">Question</p>
-                <p class="text-white text-2xl font-bold">1/1</p>
-            </div>
-        </div>
-
-        <!-- Quiz Card -->
-        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6 glow" style="border: 1px solid rgba(255,255,255,0.2)">
-            <!-- Question -->
-            <div class="mb-8">
-                <h2 class="text-white text-xl font-bold mb-2">Which planet is known as the Red Planet?</h2>
-                <div class="h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></div>
-            </div>
-
-            <!-- Options -->
-            <div class="space-y-4">
-                <div class="option bg-purple-600 hover:bg-purple-500 text-white rounded-xl p-4 cursor-pointer transition-all duration-200 glow" onclick="checkAnswer(this, false)">
-                    <div class="flex items-center">
-                        <div class="bg-white bg-opacity-20 rounded-lg w-8 h-8 flex items-center justify-center mr-3">
-                            <span class="font-bold">A</span>
-                        </div>
-                        <span>Venus</span>
-                    </div>
-                </div>
-
-                <div class="option bg-pink-600 hover:bg-pink-500 text-white rounded-xl p-4 cursor-pointer transition-all duration-200 glow" onclick="checkAnswer(this, false)">
-                    <div class="flex items-center">
-                        <div class="bg-white bg-opacity-20 rounded-lg w-8 h-8 flex items-center justify-center mr-3">
-                            <span class="font-bold">B</span>
-                        </div>
-                        <span>Jupiter</span>
-                    </div>
-                </div>
-
-                <div class="option bg-green-600 hover:bg-green-500 text-white rounded-xl p-4 cursor-pointer transition-all duration-200 glow" onclick="checkAnswer(this, true)">
-                    <div class="flex items-center">
-                        <div class="bg-white bg-opacity-20 rounded-lg w-8 h-8 flex items-center justify-center mr-3">
-                            <span class="font-bold">C</span>
-                        </div>
-                        <span>Mars</span>
-                    </div>
-                </div>
-
-                <div class="option bg-yellow-600 hover:bg-yellow-500 text-white rounded-xl p-4 cursor-pointer transition-all duration-200 glow" onclick="checkAnswer(this, false)">
-                    <div class="flex items-center">
-                        <div class="bg-white bg-opacity-20 rounded-lg w-8 h-8 flex items-center justify-center mr-3">
-                            <span class="font-bold">D</span>
-                        </div>
-                        <span>Saturn</span>
-                    </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Quiz Level:</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="quizLevel" value="easy">
+                        <span class="ml-2">Easy</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="quizLevel" value="medium">
+                        <span class="ml-2">Medium</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="quizLevel" value="hard">
+                        <span class="ml-2">Hard</span>
+                    </label>
                 </div>
             </div>
-
-            <!-- Result Message -->
-            <div id="resultMessage" class="hidden mt-6 p-4 rounded-xl text-white text-center font-bold"></div>
-        </div>
-
-        <!-- Next Button -->
-        <button id="nextBtn" onclick="resetQuiz()" class="hidden w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold tracking-wider glow hover:opacity-90 transition-all duration-200">
-            Play Again
-        </button>
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Submit
+                </button>
+            </div>
+        </form>
     </div>
-
-    <script>
-        function checkAnswer(element, isCorrect) {
-            // Disable all options
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.style.pointerEvents = 'none';
-            });
-
-            if (isCorrect) {
-                element.classList.add('correct');
-                element.classList.add('bg-green-500');
-                document.getElementById('resultMessage').textContent = 'Correct! 🎉';
-                document.getElementById('resultMessage').classList.remove('hidden');
-                document.getElementById('resultMessage').classList.add('bg-green-500', 'bg-opacity-30');
-            } else {
-                element.classList.add('bg-red-500');
-                document.getElementById('resultMessage').textContent = 'Wrong answer! 😢';
-                document.getElementById('resultMessage').classList.remove('hidden');
-                document.getElementById('resultMessage').classList.add('bg-red-500', 'bg-opacity-30');
-                
-                // Highlight correct answer
-                document.querySelectorAll('.option').forEach(opt => {
-                    if (opt.textContent.includes('Mars')) {
-                        opt.classList.add('bg-green-500', 'correct');
-                    }
-                });
-            }
-
-            document.getElementById('nextBtn').classList.remove('hidden');
-        }
-
-        function resetQuiz() {
-            // Reset all options
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.style.pointerEvents = 'auto';
-                opt.classList.remove('bg-green-500', 'bg-red-500', 'correct');
-            });
-
-            document.getElementById('resultMessage').classList.add('hidden');
-            document.getElementById('nextBtn').classList.add('hidden');
-        }
-    </script>
 </body>
 </html>
