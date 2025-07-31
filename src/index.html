@@ -8,7 +8,7 @@
 <body>
     <h1 class="text-white text-4xl font-bold mb-8 absolute top-8 left-1/2 transform -translate-x-1/2">AuraQuiz</h1>
     <div class="flex justify-center items-center h-screen">
-        <form class="bg-white p-8 rounded-lg shadow-md w-96">
+        <form id="quizForm" class="bg-white p-8 rounded-lg shadow-md w-96">
             <div class="mb-4">
                 <label for="keyword" class="block text-gray-700 text-sm font-bold mb-2">Keyword:</label>
                 <input type="text" id="keyword" name="keyword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter keyword">
@@ -37,5 +37,40 @@
             </div>
         </form>
     </div>
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const keyword = document.getElementById('keyword').value;
+            const quizLevel = document.querySelector('input[name="quizLevel"]:checked');
+
+            if (!keyword || !quizLevel) {
+                alert('Please enter a keyword and select a quiz level.');
+                return;
+            }
+
+            const data = {
+                keyword: keyword,
+                quizLevel: quizLevel.value
+            };
+
+            try {
+                const response = await fetch('/submit-quiz', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                console.log('Server response:', result);
+                alert('Form submitted successfully! Check console for response.');
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Error submitting form. Please try again.');
+            }
+        });
+    </script>
 </body>
 </html>
