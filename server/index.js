@@ -28,7 +28,16 @@ app.post('/submit-quiz', async (req, res) => { // Make the function async
         // Forward data to the webhook and capture the response
         const webhookResponse = await axios.post(webhookUrl, { keyword, quizLevel, sessionId });
         console.log('Data successfully forwarded to webhook.');
-        console.log('Webhook response:', webhookResponse.data); // Log the webhook's response data
+        console.log('Webhook response:', JSON.stringify(webhookResponse.data, null, 2)); // Log the webhook's response data with full detail
+
+        // Save the webhook response to quiz.json
+        fs.writeFile(path.join(__dirname, 'quiz.json'), JSON.stringify(webhookResponse.data, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing webhook response to quiz.json:', err);
+            } else {
+                console.log('Webhook response successfully saved to quiz.json');
+            }
+        });
     } catch (error) {
         console.error('Error forwarding data to webhook:', error.message);
         if (error.response) {

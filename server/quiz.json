@@ -1,0 +1,42 @@
+{
+  "title": "Asia (Easy)",
+  "totalQuestions": 3,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "questionText": "Which of the following is the largest continent in the world by land area and population?",
+      "options": [
+        "A) Africa",
+        "B) Europe",
+        "C) Asia",
+        "D) South America"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Asia is the largest continent in the world, covering approximately 30% of the Earth's land area and home to over 60% of the world's population. The other continents listed are significantly smaller in both aspects."
+    },
+    {
+      "questionNumber": 2,
+      "questionText": "What is the name of the world's highest mountain, located in the Himalayas in Asia?",
+      "options": [
+        "A) Mount Kilimanjaro",
+        "B) Mount McKinley (Denali)",
+        "C) Mount Everest",
+        "D) Mount Blanc"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mount Everest is the highest mountain in the world, standing at 8,848.86 meters (29,031.7 feet) above sea level, and is located in the Himalayas, a mountain range primarily in Asia. Mount Kilimanjaro is in Africa, Mount McKinley (Denali) in North America, and Mount Blanc in Europe."
+    },
+    {
+      "questionNumber": 3,
+      "questionText": "Which of these countries is located on the continent of Asia?",
+      "options": [
+        "A) Brazil",
+        "B) Canada",
+        "C) China",
+        "D) Egypt"
+      ],
+      "correctAnswer": "C",
+      "explanation": "China is a vast country located in East Asia and is known for being the most populous country in the world. Brazil is located in South America, Canada in North America, and Egypt is primarily located in North Africa."
+    }
+  ]
+}
