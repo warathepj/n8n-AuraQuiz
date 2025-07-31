@@ -35,6 +35,13 @@
                 <p class="text-green-300 font-medium">Question</p>
                 <p id="questionNumberDisplay" class="text-white text-2xl font-bold">1/1</p>
             </div>
+            <div class="bg-blue-400 text-purple-900 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl glow">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="text-right">
+                <p class="text-green-300 font-medium">Score</p>
+                <p id="scoreDisplay" class="text-white text-2xl font-bold">0</p>
+            </div>
         </div>
 
         <!-- Quiz Card -->
@@ -58,14 +65,15 @@
         </div>
 
         <!-- Next Button -->
-        <button id="nextBtn" onclick="resetQuiz()" class="hidden w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold tracking-wider glow hover:opacity-90 transition-all duration-200">
-            Play Again
+        <button id="nextBtn" onclick="nextQuestion()" class="hidden w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold tracking-wider glow hover:opacity-90 transition-all duration-200">
+            Next Question
         </button>
     </div>
 
     <script>
         let quizData = null;
-        let currentQuestion = null;
+        let currentQuestionIndex = 0;
+        let score = 0;
 
         async function initQuiz() {
             try {
@@ -73,8 +81,10 @@
                 quizData = await response.json();
                 console.log('Quiz Data:', quizData);
                 if (quizData && quizData.questions && quizData.questions.length > 0) {
-                    currentQuestion = quizData.questions[0]; // Only render the first question
-                    renderQuestion(currentQuestion);
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    document.getElementById('scoreDisplay').textContent = score;
+                    renderQuestion(quizData.questions[currentQuestionIndex]);
                 } else {
                     console.error('No quiz questions found.');
                     document.getElementById('questionText').textContent = 'No quiz available.';
@@ -86,7 +96,7 @@
         }
 
         function renderQuestion(question) {
-            document.getElementById('questionNumberDisplay').textContent = `1/${quizData.totalQuestions}`;
+            document.getElementById('questionNumberDisplay').textContent = `${currentQuestionIndex + 1}/${quizData.totalQuestions}`;
             document.getElementById('questionText').textContent = question.questionText;
 
             const optionsContainer = document.getElementById('optionsContainer');
@@ -128,12 +138,14 @@
                 opt.style.pointerEvents = 'none';
             });
 
-            const isCorrect = selectedOptionLetter === currentQuestion.correctAnswer;
+            const isCorrect = selectedOptionLetter === quizData.questions[currentQuestionIndex].correctAnswer;
             const resultMessage = document.getElementById('resultMessage');
             const explanationMessage = document.getElementById('explanationMessage');
             const nextBtn = document.getElementById('nextBtn');
 
             if (isCorrect) {
+                score++;
+                document.getElementById('scoreDisplay').textContent = score;
                 element.classList.add('correct');
                 element.classList.add('bg-green-500');
                 resultMessage.textContent = 'Correct! 🎉';
@@ -148,34 +160,51 @@
                 // Highlight correct answer
                 document.querySelectorAll('.option').forEach(opt => {
                     const optionLetter = opt.querySelector('span').textContent;
-                    if (optionLetter === currentQuestion.correctAnswer) {
+                    if (optionLetter === quizData.questions[currentQuestionIndex].correctAnswer) {
                         opt.classList.add('bg-green-500', 'correct');
                     }
                 });
             }
 
             // Display explanation
-            explanationMessage.textContent = currentQuestion.explanation;
+            explanationMessage.textContent = quizData.questions[currentQuestionIndex].explanation;
             explanationMessage.classList.remove('hidden');
 
             nextBtn.classList.remove('hidden');
+            nextBtn.textContent = (currentQuestionIndex < quizData.totalQuestions - 1) ? 'Next Question' : 'Show Score';
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.totalQuestions) {
+                // Reset UI for next question
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.style.pointerEvents = 'auto';
+                    opt.classList.remove('bg-green-500', 'bg-red-500', 'correct');
+                });
+                document.getElementById('resultMessage').classList.add('hidden');
+                document.getElementById('explanationMessage').classList.add('hidden');
+                document.getElementById('nextBtn').classList.add('hidden');
+                renderQuestion(quizData.questions[currentQuestionIndex]);
+            } else {
+                // Quiz finished, display final score
+                document.getElementById('questionText').textContent = `Quiz Finished! Your score: ${score} / ${quizData.totalQuestions}`;
+                document.getElementById('optionsContainer').innerHTML = ''; // Clear options
+                document.getElementById('resultMessage').classList.add('hidden');
+                document.getElementById('explanationMessage').classList.add('hidden');
+                document.getElementById('nextBtn').textContent = 'Play Again';
+                document.getElementById('nextBtn').onclick = resetQuiz;
+            }
         }
 
         function resetQuiz() {
-            // Reset all options
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.style.pointerEvents = 'auto';
-                opt.classList.remove('bg-green-500', 'bg-red-500', 'correct');
-            });
-
-            document.getElementById('resultMessage').classList.add('hidden');
-            document.getElementById('explanationMessage').classList.add('hidden'); // Hide explanation
-            document.getElementById('nextBtn').classList.add('hidden');
-            
-            // Re-render the first question to reset the state
-            if (currentQuestion) {
-                renderQuestion(currentQuestion);
-            }
+            currentQuestionIndex = 0;
+            score = 0;
+            document.getElementById('scoreDisplay').textContent = score;
+            document.getElementById('nextBtn').onclick = nextQuestion; // Reset button action
+            document.getElementById('nextBtn').textContent = 'Next Question'; // Reset button text
+            document.getElementById('nextBtn').classList.add('hidden'); // Hide button initially
+            initQuiz(); // Re-initialize to fetch data and render first question
         }
 
         // Initialize the quiz when the page loads

@@ -1,42 +1,42 @@
 {
-  "title": "butterfly (Easy)",
+  "title": "นก (Easy)",
   "totalQuestions": 3,
   "questions": [
     {
       "questionNumber": 1,
-      "questionText": "What do adult butterflies primarily drink for energy from flowers?",
+      "questionText": "สิ่งใดที่พบนกเท่านั้นและไม่มีในสัตว์ชนิดอื่น?",
       "options": [
-        "A) Water",
-        "B) Nectar",
-        "C) Sap",
-        "D) Dew drops"
+        "A) ขน",
+        "B) หนวด",
+        "C) เกล็ด",
+        "D) ครีบ"
       ],
-      "correctAnswer": "B",
-      "explanation": "Adult butterflies primarily feed on nectar from flowers, which provides them with the sugar and energy they need. While they may drink water or dew for hydration, nectar is their main food source. Sap is a food source for some insects but not typically the primary one for most adult butterflies."
+      "correctAnswer": "A",
+      "explanation": "นกทุกชนิดมีขนปกคลุมร่างกาย ซึ่งเป็นลักษณะเฉพาะที่ไม่มีในสัตว์ประเภทอื่น หนวดเป็นส่วนของแมลง เกล็ดเป็นส่วนของสัตว์เลื้อยคลาน และครีบเป็นส่วนของปลา"
     },
     {
       "questionNumber": 2,
-      "questionText": "What covers a butterfly's wings, giving them their vibrant colors and patterns?",
+      "questionText": "นกส่วนใหญ่ใช้ส่วนใดของร่างกายในการบิน?",
       "options": [
-        "A) Fur",
-        "B) Feathers",
-        "C) Scales",
-        "D) Skin"
+        "A) ขา",
+        "B) ปีก",
+        "C) หาง",
+        "D) จะงอยปาก"
       ],
-      "correctAnswer": "C",
-      "explanation": "Butterfly wings are covered in thousands of tiny, overlapping scales. These scales contain pigments or are structured in a way that creates iridescent colors, giving butterflies their beautiful appearance. Fur and feathers are coverings for mammals and birds, respectively, not insects. Skin is a general term but doesn't describe the specific structures on a butterfly's wing."
+      "correctAnswer": "B",
+      "explanation": "นกส่วนใหญ่ใช้ปีกในการบินเคลื่อนที่ในอากาศ ขาใช้ในการเดินหรือเกาะ หางช่วยในการทรงตัวและควบคุมทิศทาง ส่วนจะงอยปากใช้ในการกินอาหารหรือสร้างรัง"
     },
     {
       "questionNumber": 3,
-      "questionText": "Before transforming into an adult butterfly, what is the worm-like larval stage called?",
+      "questionText": "นกมักจะวางไข่ไว้ที่ไหน?",
       "options": [
-        "A) Tadpole",
-        "B) Caterpillar",
-        "C) Pupa",
-        "D) Larva"
+        "A) ใต้ดิน",
+        "B) ในน้ำ",
+        "C) บนต้นไม้ในรัง",
+        "D) ในถ้ำ"
       ],
-      "correctAnswer": "B",
-      "explanation": "The worm-like larval stage of a butterfly is specifically known as a caterpillar. Tadpole is the larval stage of frogs and toads. Pupa is the resting stage after the caterpillar, and while 'larva' is a general term for the immature form, 'caterpillar' is the precise and well-known term for butterflies."
+      "correctAnswer": "C",
+      "explanation": "นกส่วนใหญ่สร้างรังบนต้นไม้เพื่อวางไข่และเลี้ยงลูกอ่อน การวางไข่ใต้ดิน ในน้ำ หรือในถ้ำนั้นพบได้ในสัตว์ชนิดอื่น เช่น สัตว์เลื้อยคลาน หรือสัตว์น้ำบางชนิด"
     }
   ]
 }
