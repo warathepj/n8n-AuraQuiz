@@ -3,35 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AuraQuiz - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .glow {
+            box-shadow: 0 0 15px currentColor;
+        }
+        .option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .option.correct {
+            animation: pulse 0.5s 2;
+        }
+    </style>
 </head>
-<body>
-    <h1 class="text-white text-4xl font-bold mb-8 absolute top-8 left-1/2 transform -translate-x-1/2">AuraQuiz</h1>
-    <div class="flex justify-center items-center h-screen">
-        <form id="quizForm" class="bg-white p-8 rounded-lg shadow-md w-96">
+<body class="bg-gradient-to-br from-purple-900 to-pink-700 min-h-screen flex flex-col items-center p-4">
+    <h1 class="text-white text-4xl font-bold mb-8 text-center mt-8">AuraQuiz</h1>
+    <div class="w-full max-w-md">
+        <form id="quizForm" class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6 glow" style="border: 1px solid rgba(255,255,255,0.2)">
             <div class="mb-4">
-                <label for="keyword" class="block text-gray-700 text-sm font-bold mb-2">Keyword:</label>
+                <label for="keyword" class="block text-white text-sm font-bold mb-2">Keyword:</label>
                 <input type="text" id="keyword" name="keyword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter keyword">
             </div>
             <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Quiz Level:</label>
-                <div class="mt-2">
+                <label class="block text-white text-sm font-bold mb-2">Quiz Level:</label>
+                <div class="mt-2 text-white">
                     <label class="inline-flex items-center">
-                        <input type="radio" class="form-radio" name="quizLevel" value="easy">
+                        <input type="radio" class="form-radio text-purple-600" name="quizLevel" value="easy">
                         <span class="ml-2">Easy</span>
                     </label>
                     <label class="inline-flex items-center ml-6">
-                        <input type="radio" class="form-radio" name="quizLevel" value="medium">
+                        <input type="radio" class="form-radio text-purple-600" name="quizLevel" value="medium">
                         <span class="ml-2">Medium</span>
                     </label>
                     <label class="inline-flex items-center ml-6">
-                        <input type="radio" class="form-radio" name="quizLevel" value="hard">
+                        <input type="radio" class="form-radio text-purple-600" name="quizLevel" value="hard">
                         <span class="ml-2">Hard</span>
                     </label>
                 </div>
             </div>
             <div class="flex items-center justify-between">
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold tracking-wider glow hover:opacity-90 transition-all duration-200">
                     Submit
                 </button>
             </div>

@@ -1,42 +1,42 @@
 {
-  "title": "Ferrari (Easy)",
+  "title": "Quantum Physics (Hard)",
   "totalQuestions": 3,
   "questions": [
     {
       "questionNumber": 1,
-      "questionText": "Who founded the luxury Italian sports car brand Ferrari?",
+      "questionText": "Which subtle, high-precision effect, explained by the interaction of an electron with the quantum fluctuations of the electromagnetic vacuum (virtual photons), provided one of the earliest and most compelling experimental validations of Quantum Electrodynamics (QED)?",
       "options": [
-        "A) Ferruccio Lamborghini",
-        "B) Henry Ford",
-        "C) Enzo Ferrari",
-        "D) Karl Benz"
+        "A) The Zeeman effect",
+        "B) The Stark effect",
+        "C) The Lamb Shift",
+        "D) The Paschen-Back effect"
       ],
       "correctAnswer": "C",
-      "explanation": "Enzo Ferrari founded the Scuderia Ferrari racing team in 1929, which later evolved into the Ferrari automobile manufacturing company. Ferruccio Lamborghini founded a rival Italian sports car company, while Henry Ford founded Ford Motor Company, and Karl Benz is credited with inventing the first automobile."
+      "explanation": "The Lamb Shift is a tiny energy difference between the $2S_{1/2}$ and $2P_{1/2}$ states of the hydrogen atom, not predicted by Dirac's equation alone. It arises from the interaction of the electron with virtual photons in the vacuum, a direct consequence of QED's radiative corrections. The Zeeman, Stark, and Paschen-Back effects are also atomic spectroscopic phenomena, but they are explained by the interaction of atoms with external magnetic or electric fields, rather than the intrinsic quantum fluctuations of the vacuum as described by QED."
     },
     {
       "questionNumber": 2,
-      "questionText": "What iconic color is most famously associated with Ferrari sports cars?",
+      "questionText": "A successful experimental violation of Bell's inequalities, as demonstrated by Aspect and others, primarily disproves which fundamental classical concept when applied to quantum phenomena?",
       "options": [
-        "A) British Racing Green",
-        "B) French Blue",
-        "C) German Silver",
-        "D) Rosso Corsa (Racing Red)"
+        "A) The universality of Planck's constant.",
+        "B) The inherent randomness of quantum measurements.",
+        "C) Local realism.",
+        "D) The principle of superposition."
       ],
-      "correctAnswer": "D",
-      "explanation": "Rosso Corsa, which means \"Racing Red\" in Italian, is the traditional national racing color of Italy and has become synonymous with Ferrari cars. The other colors listed are associated with the national racing colors of Britain, France, and Germany, respectively."
+      "correctAnswer": "C",
+      "explanation": "Bell's inequalities provide a quantitative test for local realism, which posits that physical properties exist objectively prior to measurement (realism) and that influences cannot travel faster than light (locality). A violation of these inequalities, as observed in experiments with entangled particles, demonstrates that at least one of these assumptions (typically locality, given the experimental setups and counterfactual definiteness) must be false in the quantum realm. Planck's constant is a fundamental constant, and quantum randomness and superposition are core principles of quantum mechanics that are not disproven but rather underpin the phenomena Bell's theorem explores."
     },
     {
       "questionNumber": 3,
-      "questionText": "What is the famous animal emblem seen on Ferrari's logo?",
+      "questionText": "What is the physical principle in Quantum Chromodynamics (QCD) that describes the weakening of the strong force coupling between quarks as the energy scale of their interaction increases (or equivalently, as the distance between them decreases)?",
       "options": [
-        "A) A Leaping Jaguar",
-        "B) A Raging Bull",
-        "C) A Soaring Eagle",
-        "D) A Prancing Horse"
+        "A) Confinement",
+        "B) Chiral Symmetry Breaking",
+        "C) Asymptotic Freedom",
+        "D) Quark-gluon plasma formation"
       ],
-      "correctAnswer": "D",
-      "explanation": "The famous emblem of Ferrari is the \"Cavallino Rampante\" or \"Prancing Horse.\" A leaping jaguar is the emblem for Jaguar cars, and a raging bull is the emblem for Lamborghini. A soaring eagle is not a commonly associated emblem for a major car manufacturer."
+      "correctAnswer": "C",
+      "explanation": "Asymptotic freedom is a unique property of the strong force described by QCD, where the coupling strength between quarks and gluons decreases logarithmically as the momentum transfer (energy) of their interaction increases, meaning the force becomes weaker at very short distances. This allows for perturbative calculations at high energies. Confinement is the opposite phenomenon, where the strong force increases with distance, preventing quarks from being observed freely. Chiral symmetry breaking is related to the generation of quark masses. Quark-gluon plasma formation is a state of matter where confinement is overcome at extreme conditions, not the principle describing the force's distance dependence."
     }
   ]
 }
