@@ -24,7 +24,7 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-purple-900 to-pink-700 min-h-screen flex items-center justify-center p-4">
-    <h1 class="text-white text-4xl font-bold mb-8 absolute top-8 left-1/2 transform -translate-x-1/2">AuraQuiz</h1>
+    <h1 class="text-white text-4xl font-bold mb-8 text-center mt-8">AuraQuiz</h1>
     <div class="w-full max-w-md">
         <!-- Quiz Header -->
         <div class="flex items-center justify-between mb-8">
@@ -220,6 +220,15 @@
 
         // Initialize the quiz when the page loads
         document.addEventListener('DOMContentLoaded', initQuiz);
+    </script>
+    <script>
+        // Refresh page only once per session
+        if (!sessionStorage.getItem('hasRefreshed')) {
+            sessionStorage.setItem('hasRefreshed', 'true');
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
+        }
     </script>
 </body>
 </html>
